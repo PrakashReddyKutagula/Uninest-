@@ -16,6 +16,7 @@ Thumbs.db
 # Build outputs
 uninest_aadmin/dist/
 uninest_aadmin/build/
+_site/
 
 # Local Env Files
 .env

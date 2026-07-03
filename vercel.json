@@ -1,3 +1,10 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "framework": null,
+  "buildCommand": "bash build-vercel.sh",
+  "outputDirectory": "_site",
+  "rewrites": [
+    { "source": "/admin/(.*)", "destination": "/admin/index.html" }
+  ]
 }
