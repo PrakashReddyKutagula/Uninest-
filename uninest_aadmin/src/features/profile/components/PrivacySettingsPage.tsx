@@ -32,9 +32,9 @@ export function PrivacySettingsPage() {
   const [openPolicy, setOpenPolicy] = useState<PolicyType>(null);
 
   const getPolicyUrl = (type: PolicyType) => {
-    switch(type) {
-      case 'privacy': return '/privacy-policy/';
-      case 'terms': return '/terms/';
+    switch (type) {
+      case 'privacy': return '/privacy-policy';
+      case 'terms': return '/terms';
       case 'community': return '/safety-standards.html';
       default: return '';
     }

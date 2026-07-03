@@ -38,8 +38,8 @@ export function LoginPage({
 
   const getPolicyUrl = (type: PolicyType) => {
     switch(type) {
-      case 'privacy': return '/privacy-policy/';
-      case 'terms': return '/terms/';
+      case 'privacy': return '/privacy-policy';
+      case 'terms': return '/terms';
       case 'community': return '/safety-standards.html';
       default: return '';
     }
