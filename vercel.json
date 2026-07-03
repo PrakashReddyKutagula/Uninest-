@@ -4,8 +4,6 @@
   "framework": null,
   "buildCommand": "bash build-vercel.sh",
   "outputDirectory": "_site",
-  "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
     { "source": "/admin/(.*)", "destination": "/admin/index.html" }
   ]
