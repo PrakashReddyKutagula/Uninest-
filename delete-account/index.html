@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delete Account — UniNest</title>
+  <meta name="description" content="Request account deletion for the UniNest student super app." />
+  <link rel="icon" href="../public/logo.png" type="image/png" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="delete-account.css?v=1.0.1">
+</head>
+<body class="bg-black text-[#f5f5f7] font-sans antialiased selection:bg-brand-blue/30 selection:text-white">
+  <div class="delete-account-root">
+    
+    <!-- Navigation Header -->
+    <header>
+      <div class="nav-container">
+        <a href="../index.html" class="logo-wrapper">
+          <img src="../logo.jpg" class="logo-img" alt="UniNest Logo">
+          <span>UniNest</span>
+        </a>
+        <div class="nav-actions">
+          <button class="btn btn-icon theme-toggle" aria-label="Toggle theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <a href="https://myuninest.in" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download App</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Layout Content -->
+    <main class="layout-wrapper">
+      
+      <!-- Hero -->
+      <section class="hero">
+        <div class="badge">
+          <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background-color:var(--color-accent);margin-right:6px"></span>
+          Data Control
+        </div>
+        <h1>Delete Your Account</h1>
+        <p class="subtitle">We're sorry to see you go. Choose how you would like to delete your UniNest account and associated data.</p>
+      </section>
+
+      <!-- Tabs -->
+      <div class="tabs-container">
+        <button class="tab-btn active" data-tab="app-instructions">Delete via Mobile App</button>
+        <button class="tab-btn" data-tab="web-request">Submit Request Online</button>
+      </div>
+
+      <!-- Tab Content Panels -->
+      <div class="panels-container">
+        
+        <!-- Panel 1: App Instructions -->
+        <div class="tab-panel active" id="app-instructions">
+          <div class="glass-card">
+            <h2 class="card-title">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+              Delete Instantly via the App (Recommended)
+            </h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">For the fastest security and instant account termination, we recommend deleting your account directly inside the UniNest mobile application:</p>
+            
+            <div class="steps-list">
+              <div class="step-item">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                  <h3 class="step-title">Open the App</h3>
+                  <p class="step-desc">Launch the UniNest app on your mobile device and log in.</p>
+                </div>
+              </div>
+              
+              <div class="step-item">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                  <h3 class="step-title">Go to Profile</h3>
+                  <p class="step-desc">Tap on your profile picture in the navigation bar to open your Profile Page.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                  <h3 class="step-title">Access Privacy Settings</h3>
+                  <p class="step-desc">Tap on the Settings gear icon, and select 'Privacy & Data' or 'Privacy Settings'.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                  <h3 class="step-title">Delete Account</h3>
+                  <p class="step-desc">Scroll to the bottom, tap 'Delete Account', and confirm the security warning. All data is deleted instantly.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Web Request Form -->
+        <div class="tab-panel" id="web-request">
+          <div class="glass-card">
+            <!-- Form Block -->
+            <form id="delete-request-form">
+              <h2 class="card-title">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+                Submit Deletion Request
+              </h2>
+              <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">If you have uninstalled the app and need to delete your account, submit this request. We will process your deletion request within 48 hours.</p>
+
+              <!-- Warning Box -->
+              <div class="warning-box">
+                <div class="warning-title">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg>
+                  Warning: Data Loss is Permanent
+                </div>
+                <ul class="warning-list">
+                  <li>Your user profile, display name, and avatar will be permanently removed.</li>
+                  <li>Your active schedules and timetables will be permanently deleted.</li>
+                  <li>All messages, chats, and shared group files will be destroyed.</li>
+                  <li>Location logs, friend lists, and active SOS/check-ins will be cleared.</li>
+                </ul>
+              </div>
+
+              <!-- Input Group: Email -->
+              <div class="form-group">
+                <label for="registered-email" class="form-label">Registered University Email</label>
+                <input type="email" id="registered-email" class="form-input" placeholder="e.g., student@university.edu" required />
+              </div>
+
+              <!-- Input Group: Reason -->
+              <div class="form-group">
+                <label for="delete-reason" class="form-label">Reason for leaving (Optional)</label>
+                <select id="delete-reason" class="form-select">
+                  <option value="" disabled selected>Select a reason...</option>
+                  <option value="graduated">Graduated / Finished courses</option>
+                  <option value="privacy">Privacy concerns</option>
+                  <option value="no-use">No longer use the platform</option>
+                  <option value="other">Other reason</option>
+                </select>
+              </div>
+
+              <!-- Input Group: Checkbox Confirmation -->
+              <div class="form-group" style="margin-bottom: 2rem;">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="confirm-deletion" required />
+                  <span class="checkbox-custom">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                  <span>I confirm that I want to permanently delete my account and understand that all associated data will be unrecoverable.</span>
+                </label>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" id="submit-request-btn" class="submit-btn">
+                <span>Submit Deletion Request</span>
+              </button>
+            </form>
+
+            <!-- Success Block (Hidden by default) -->
+            <div id="success-block" class="success-state" style="display: none;">
+              <div class="success-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <h2 class="success-title">Request Submitted</h2>
+              <p class="success-desc">We have received your request to delete the account for <strong id="success-email"></strong>. A verification email has been sent to this address. Please click the confirmation link in the email to complete the deletion process.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-brand-title">
+            <img src="../logo.jpg" class="logo-img" alt="UniNest Logo" style="width:28px;height:28px;margin-right:8px;">
+            <span>UniNest</span>
+          </div>
+          <p class="footer-desc">Connect with campus peers, manage schedules, find events, and build meaningful relationships at university.</p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-links-title">Resources</div>
+          <ul>
+            <li><a href="https://myuninest.in" target="_blank" rel="noopener noreferrer">Website</a></li>
+            <li><a href="mailto:ghoshdynamics@gmail.com">Support Center</a></li>
+            <li><a href="../terms/#contact-information">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-links-title">Legal</div>
+          <ul>
+            <li><a href="../privacy-policy/">Privacy Policy</a></li>
+            <li><a href="../terms/">Terms &amp; Conditions</a></li>
+            <li><a href="./">Delete Account</a></li>
+            <li><a href="mailto:ghoshdynamics@gmail.com">Contact</a></li>
+            <li><a href="https://myuninest.in/admin/index.html">Admin Login</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 UniNest. All rights reserved.</div>
+
+      </div>
+    </footer>
+
+    <!-- Toast clipboard helper (optional, consistent with other static pages) -->
+    <div class="toast" id="clipboard-toast">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      <span>Link copied to clipboard!</span>
+    </div>
+
+  </div>
+
+  <!-- Javascript Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const rootElement = document.querySelector('.delete-account-root');
+      const themeToggleBtn = document.querySelector('.theme-toggle');
+      
+      // Theme Icons
+      const sunIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+      const moonIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+
+      function updateThemeIcon() {
+        if (rootElement.classList.contains('light-theme')) {
+          themeToggleBtn.innerHTML = sunIcon;
+        } else {
+          themeToggleBtn.innerHTML = moonIcon;
+        }
+      }
+
+      // Sync and initialize Theme
+      const savedTheme = localStorage.getItem('uninest-theme') || 'dark';
+      if (savedTheme === 'light') {
+        rootElement.classList.add('light-theme');
+        document.documentElement.classList.remove('dark');
+      } else {
+        rootElement.classList.remove('light-theme');
+        document.documentElement.classList.add('dark');
+      }
+      updateThemeIcon();
+
+      themeToggleBtn.addEventListener('click', () => {
+        const isLight = rootElement.classList.toggle('light-theme');
+        localStorage.setItem('uninest-theme', isLight ? 'light' : 'dark');
+        if (isLight) {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+        updateThemeIcon();
+      });
+
+      // Tab Switching
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      const tabPanels = document.querySelectorAll('.tab-panel');
+
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetTab = btn.getAttribute('data-tab');
+
+          tabButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          tabPanels.forEach(panel => {
+            if (panel.id === targetTab) {
+              panel.classList.add('active');
+            } else {
+              panel.classList.remove('active');
+            }
+          });
+        });
+      });
+
+      // Form Submission
+      const form = document.getElementById('delete-request-form');
+      const successBlock = document.getElementById('success-block');
+      const successEmailSpan = document.getElementById('success-email');
+      const submitBtn = document.getElementById('submit-request-btn');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const emailInput = document.getElementById('registered-email');
+        const email = emailInput.value;
+
+        // Button loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<span>Processing Request...</span>`;
+
+        // Simulate network latency (800ms) for premium feel
+        setTimeout(() => {
+          form.style.display = 'none';
+          successEmailSpan.textContent = email;
+          successBlock.style.display = 'block';
+        }, 800);
+      });
+    });
+  </script>
+</body>
+</html>

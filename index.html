@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniNest — Learn. Grow. Belong.</title>
+    <meta name="description" content="A scroll-driven student platform featuring the Nest, Classmate Finder, Smart Timetable, Student Clubs, Campus Messaging, and Hangout Planner.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=1.0.2">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-icon">
+                <svg viewBox="0 0 100 100" class="spinner">
+                    <circle cx="50" cy="50" r="45" />
+                    <circle cx="50" cy="50" r="45" class="progress-ring" id="progress-ring" />
+                </svg>
+                <div class="loader-logo-inner">UN</div>
+            </div>
+            <h1 class="loader-title">UniNest</h1>
+            <div class="loader-status">
+                <span id="progress-text">Building the Nest... 0%</span>
+            </div>
+            <div class="loader-bar-container">
+                <div id="progress-bar" class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pinned Background Canvas -->
+    <div class="canvas-container">
+        <canvas id="scroll-canvas"></canvas>
+        <div class="canvas-overlay"></div>
+    </div>
+
+    <!-- HUD Header -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" class="logo-img" alt="UniNest Logo">
+            UniNest
+        </div>
+        <button class="hamburger-btn" aria-label="Toggle Navigation" aria-expanded="false">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+        </button>
+        <nav class="nav-links">
+            <a href="#story-hero" class="nav-link">Home</a>
+            <a href="#story-nest" class="nav-link">The Nest</a>
+            <a href="#story-finder" class="nav-link">Classmate Finder</a>
+            <a href="#story-timetable" class="nav-link">Timetable</a>
+            <a href="#story-clubs" class="nav-link">Clubs</a>
+            <a href="#story-messages" class="nav-link">Messages</a>
+            <a href="#story-hangouts" class="nav-link">Hangouts</a>
+            <a href="#story-events" class="nav-link">Events</a>
+            <a href="#story-pulse" class="nav-link">Pulse</a>
+            <a href="#story-cta" class="nav-link">Join Nest</a>
+            <div class="nav-indicator"></div>
+        </nav>
+    </header>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scroll-indicator">
+        <span class="scroll-text">Scroll to explore</span>
+        <div class="mouse-icon">
+            <div class="mouse-wheel"></div>
+        </div>
+    </div>
+
+    <!-- Story Content Overlay (positioned absolutely over the spacer timeline) -->
+    <main class="storyline-container">
+        <!-- Section 1: Hero -->
+        <section id="story-hero" class="story-section active">
+            <div class="section-content text-center">
+                <h2 class="badge">01 // The Platform</h2>
+                <h1 class="story-title">A Connected Campus Ecosystem</h1>
+                <p class="story-desc">Bridging study spaces, student groups, and graduation networks into a single, unified digital campus.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: The Nest -->
+        <section id="story-nest" class="story-section">
+            <div class="section-content left-align">
+                <div class="glass-card">
+                    <div class="card-num">02</div>
+                    <h2 class="card-title">Gather at <span class="accent-text">The Nest</span></h2>
+                    <p class="card-desc">At the center of campus lies The Nest—a digital and physical sanctuary where collaborative ideas hatch. Share resources, manage club events, and connect with peers seamlessly.</p>
+                    <div class="card-tags">
+                        <span class="tag">Academic Hub</span>
+                        <span class="tag">Resource Sync</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Classmate Finder -->
+        <section id="story-finder" class="story-section">
+            <div class="section-content right-align">
+                <div class="glass-card">
+                    <div class="card-num">03</div>
+                    <h2 class="card-title">Integrated <span class="accent-text">Classmate Finder</span></h2>
+                    <p class="card-desc">Locate classmates and study partners in real time. Form study groups instantly across campus courtyards with location, course, and project interest filtering.</p>
+                    <div class="card-tags">
+                        <span class="tag">Peer locator</span>
+                        <span class="tag">Group forming</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Smart Timetable -->
+        <section id="story-timetable" class="story-section">
+            <div class="section-content left-align">
+                <div class="glass-card">
+                    <div class="card-num">04</div>
+                    <h2 class="card-title">Active <span class="accent-text">Smart Timetable</span></h2>
+                    <p class="card-desc">Navigate your schedule effortlessly. Neon pathway indicators light up dynamically on the ground to guide you straight to your next lecture halls, labs, or meeting rooms in real time.</p>
+                    <div class="card-tags">
+                        <span class="tag">Active Navigation</span>
+                        <span class="tag">Dynamic Scheduling</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Student Clubs -->
+        <section id="story-clubs" class="story-section">
+            <div class="section-content right-align">
+                <div class="glass-card">
+                    <div class="card-num">05</div>
+                    <h2 class="card-title">Vibrant <span class="accent-text">Student Clubs</span></h2>
+                    <p class="card-desc">Step into campus life. Meet with robotics groups, drone pilot circles, music groups, or academic clubs. Share schedules, host campus-wide events, and hatch new campus initiatives with ease.</p>
+                    <div class="card-tags">
+                        <span class="tag">Campus Life</span>
+                        <span class="tag">Interest Circles</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Campus Messaging -->
+        <section id="story-messages" class="story-section">
+            <div class="section-content left-align">
+                <div class="glass-card">
+                    <div class="card-num">06</div>
+                    <h2 class="card-title">Instant <span class="accent-text">Campus Messaging</span></h2>
+                    <p class="card-desc">Connect and chat in real time. Reach classmates, study circles, and club channels instantly with zero friction. Message rays guide your queries directly to peers across the digital campus.</p>
+                    <div class="card-tags">
+                        <span class="tag">Real-time Chat</span>
+                        <span class="tag">Group Channels</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Hangout Planner -->
+        <section id="story-hangouts" class="story-section">
+            <div class="section-content right-align">
+                <div class="glass-card">
+                    <div class="card-num">07</div>
+                    <h2 class="card-title">Intelligent <span class="accent-text">Hangout Planner</span></h2>
+                    <p class="card-desc">Coordinate free slots in seconds. Sync calendar schedules automatically across study circles or friends. Schedule hangouts, group study, or club meetups with zero friction.</p>
+                    <div class="card-tags">
+                        <span class="tag">Calendar Sync</span>
+                        <span class="tag">Group Planning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Campus Events -->
+        <section id="story-events" class="story-section">
+            <div class="section-content left-align">
+                <div class="glass-card">
+                    <div class="card-num">08</div>
+                    <h2 class="card-title">Campus <span class="accent-text">Events Hub</span></h2>
+                    <p class="card-desc">Stay connected with campus happenings in real time. Coordinate, host, or join hackathons, guest lectures, and music festivals with a unified events calendar.</p>
+                    <div class="card-tags">
+                        <span class="tag">Campus Calendar</span>
+                        <span class="tag">Social Sync</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Campus Pulse Feed -->
+        <section id="story-pulse" class="story-section">
+            <div class="section-content right-align">
+                <div class="glass-card">
+                    <div class="card-num">09</div>
+                    <h2 class="card-title">Campus Pulse <span class="accent-text">Feed</span></h2>
+                    <p class="card-desc">Keep your finger on the pulse of the university. Share thoughts, vote on campus initiatives, ask questions, and engage with live feeds of student discussions.</p>
+                    <div class="card-tags">
+                        <span class="tag">Live Discussions</span>
+                        <span class="tag">Campus Opinions</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: CTA -->
+        <section id="story-cta" class="story-section">
+            <div class="section-content text-center">
+                <div class="glass-card cta-card">
+                    <div class="card-num">10</div>
+                    <h2 class="cta-title">Join the Nest</h2>
+                    <p class="cta-subtitle">Be among the first to experience a smarter, more connected student network. Learn. Grow. Belong.</p>
+                    
+                    <form id="pre-register-form" class="cta-form">
+                        <div class="input-group">
+                            <input type="email" id="user-email" placeholder="Enter university email..." required aria-label="University Email">
+                            <button type="submit" class="submit-btn">
+                                <span>Get Access</span>
+                                <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                    <p class="form-disclaimer">By signing up, you agree to our <a href="terms/">Terms & Conditions</a> and <a href="privacy-policy/">Privacy Policy</a>.</p>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <p class="footer-copy">© 2026 UniNest. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="privacy-policy/" class="footer-link">Privacy Policy</a>
+                        <span class="footer-sep">|</span>
+                        <a href="terms/" class="footer-link">Terms & Conditions</a>
+                        <span class="footer-sep">|</span>
+                        <a href="delete-account/" class="footer-link">Delete Account</a>
+                        <span class="footer-sep">|</span>
+                        <a href="mailto:ghoshdynamics@gmail.com" class="footer-link">Contact</a>
+                        <span class="footer-sep">|</span>
+                        <a href="https://myuninest.in/admin/index.html" class="footer-link">Admin Login</a>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <!-- Scroll Spacer to define timeline length -->
+    <div class="scroll-spacer"></div>
+
+    <script src="script.js?v=1.0.2"></script>
+</body>
+</html>
