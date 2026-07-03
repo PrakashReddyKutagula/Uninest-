@@ -22,15 +22,15 @@ cp penguin_guide.png _site/
 # Copy logo.png from public (the symlink target)
 cp public/logo.png _site/ 2>/dev/null || true
 
-# Copy static subpages
-cp -R privacy-policy _site/
-mv _site/privacy-policy/index.html _site/privacy-policy.html
+# Copy static subpages without copying directories (to prevent Vercel trailing slash redirects)
+cp privacy-policy/index.html _site/privacy-policy.html
+cp privacy-policy/privacy-policy.css _site/privacy-policy.css
 
-cp -R terms _site/
-mv _site/terms/index.html _site/terms.html
+cp terms/index.html _site/terms.html
+cp terms/terms.css _site/terms.css
 
-cp -R delete-account _site/
-mv _site/delete-account/index.html _site/delete-account.html
+cp delete-account/index.html _site/delete-account.html
+cp delete-account/delete-account.css _site/delete-account.css
 
 # Copy standalone policy pages from public/
 cp public/safety-standards.html _site/ 2>/dev/null || true
