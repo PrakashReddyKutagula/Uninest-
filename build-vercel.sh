@@ -24,8 +24,13 @@ cp public/logo.png _site/ 2>/dev/null || true
 
 # Copy static subpages
 cp -R privacy-policy _site/
+mv _site/privacy-policy/index.html _site/privacy-policy.html
+
 cp -R terms _site/
+mv _site/terms/index.html _site/terms.html
+
 cp -R delete-account _site/
+mv _site/delete-account/index.html _site/delete-account.html
 
 # Copy standalone policy pages from public/
 cp public/safety-standards.html _site/ 2>/dev/null || true
